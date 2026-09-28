@@ -13,6 +13,9 @@ resource "lab" "main" {
     chapter "repro" {
       title = "Airlock findings"
 
+      page "p5_logs" {
+        reference = resource.page.p5_logs
+      }
       page "p3_disk" {
         reference = resource.page.p3_disk
       }

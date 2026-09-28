@@ -1,8 +1,8 @@
 # Support repro lab - Airlock finding 1: solve cut off at ~30s.
 
 resource "lab" "main" {
-  title       = "2.0 Repro - Solve timeout (point 1)"
-  description = "Checks whether solve scripts are cut off at ~30s even with a 180s timeout."
+  title       = "2.0 Repro - Airlock findings"
+  description = "Repro of the Airlock 2.0 findings, one page per point."
   layout      = resource.layout.two_column
 
   settings {
@@ -13,8 +13,11 @@ resource "lab" "main" {
 
   content {
     chapter "repro" {
-      title = "Point 1 - Solve timeout"
+      title = "Airlock findings"
 
+      page "p2_volume" {
+        reference = resource.page.p2_volume
+      }
       page "p1_solve_timeout" {
         reference = resource.page.p1_solve_timeout
       }

@@ -1,8 +1,9 @@
-# The VM the task scripts run on (volume removed again - it stops the VM booting, see point 2).
+# Point 6: boot the stock AlmaLinux 9 GenericCloud image imported via Image Builder.
+# No health_check, same as the customer's gateway-vm.
 
 resource "vm" "testvm" {
   image {
-    name = "ubuntu:22.04"
+    name = "instruqt-support/almalinux-9-test:v1"
   }
 
   resources {

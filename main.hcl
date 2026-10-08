@@ -1,6 +1,7 @@
 resource "lab" "main" {
   title       = "2.0 Repro - Airlock findings"
   description = "Repro of the Airlock 2.0 findings, one page per point."
+  tags        = ["test"]
   layout      = resource.layout.two_column
 
   settings {

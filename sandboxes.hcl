@@ -25,3 +25,20 @@ resource "vm" "testvm" {
     read_only   = true
   }
 }
+
+# Point 6 retest: imported stock AlmaLinux 9 GenericCloud image.
+# No health_check, same as the customer. Measures VM agent start time.
+resource "vm" "almatest" {
+  image {
+    name = "instruqt-support/almalinux-9-test"
+  }
+
+  resources {
+    cpu    = 2
+    memory = 2048
+  }
+
+  network {
+    id = resource.network.main.meta.id
+  }
+}
